@@ -680,9 +680,9 @@ Not exactly. Run the <code>ibmcloud oc ingress domain get --cluster public-servi
 
 In this task you will learn how we deployed the intranet website of _TechXchange Co._ (our imaginary company) using [Satellite Config](https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config) to an OpenShift cluster (`intranet-XX`) deployed on a hybrid-cloud location (`on-prem-location-XX`). You will learn how you can manage custom TLS certificates using [IBM Cloud Secrets Manager](https://www.ibm.com/cloud/secrets-manager) and how you can expose an application through private DNS and secure communication with your custom TLS certificate.
 
-### Deploy intranet website using Satellite Config
+### Inspect Satellite Config of your intranet website deployment
 
-With the help of Satellite Config, you can easily and consistently deploy, manage, and control your applications and policies across clusters and locations. In this section you are going to learn how we set set up Satellite Config to deploy the intranet website using a GitOps approach. The Kubernetes resources are located in a [public GitHub repository](https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/intranet-website.yaml).
+With the help of Satellite Config, you can easily and consistently deploy, manage, and control your applications and policies across clusters and locations. In this section you are going to learn how we set up Satellite Config to deploy the intranet website using a GitOps approach. The Kubernetes resources are located in a [public GitHub repository](https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/intranet-website.yaml).
 
 The setup consists of three steps:
 
