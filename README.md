@@ -1,6 +1,6 @@
 # IBM TechXchange 2023 - Unleash the Power of Hybrid Multi-Cloud Applications with IBM Cloud Satellite [3670]
 
-Embracing a hybrid multi-cloud architecture can be transformative for businesses. It offers a flexible and secure way to handle IT infrastructure, optimize costs, and ensure maximum uptime. Meet IBM Cloud Satellite, your partner in running workloads across multiple environments — be it private or public clouds or on-premises. Ready to dive into a hands-on session with IBM Cloud Satellite? Join us to learn how you can securely and efficiently expose your applications running on multi-cloud infrastructure.
+A hybrid multi-cloud architecture offers a flexible and secure way to handle IT infrastructure, optimize costs, and ensure maximum uptime. But transforming your business to a hybrid multi-cloud architecture can be challenging. Meet IBM Cloud Satellite - your partner in running workloads across multiple environments including private clouds, public clouds, and on-premises. Ready to dive into a hands-on session with IBM Cloud Satellite? Join us to learn how you can securely and efficiently expose your applications running on multi-cloud infrastructure.
 
 **Session Type:** Hands-on Lab\
 **Tech Tracks:** Hybrid Cloud\
@@ -37,7 +37,7 @@ Your lab environment consist of the following components:
     - runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are assigned to the OpenShift cluster)
 - OpenShift cluster running on AWS Satellite location:
     - workers are exposed publicly with an AWS load balancer
-- Satellite location running on on-premises (hybrid-cloud use case):
+- On-premises Satellite location (hybrid-cloud use case):
     - runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are assigned to the OpenShift cluster)
 - OpenShift cluster running on on-premises Satellite location
 - Jumpbox:
@@ -45,7 +45,7 @@ Your lab environment consist of the following components:
 
 ## Task 0: Find your attendee number
 
-In the lab system, you can find an e-mail address and a password assigned to you. You can use this credential to login to [IBM Cloud](https://cloud.ibm.com/login).
+In the lab system, you can find an e-mail address and a password assigned to you. You can use this credential to log in to [IBM Cloud](https://cloud.ibm.com/login).
 
 The e-mail address is specified in the following format:
 
@@ -53,11 +53,11 @@ The e-mail address is specified in the following format:
 Attila.Szucs7+XX@mail.test.ibm.com
 ```
 
-`XX` is your attendee number. Make a note of it, it will be used multiple times throughout the lab.
+`XX` is your attendee number. Make a note of it. It will be used multiple times throughout the lab.
 
 ## Task 1: Get familiar with your lab environment
 
-In this task you are going to learn about the architecture of your lab environment and learn the basic commands for IBM Cloud Satellite and Red Hat OpenShift on IBM Cloud.
+In this task, you are going to learn about the architecture of your lab environment and learn the basic commands for IBM Cloud Satellite and Red Hat OpenShift on IBM Cloud.
 
 ### Open your jumpbox
 
@@ -75,7 +75,7 @@ At this point you should be connected to the jumpbox.
 
 ### Login to the IBM Cloud account using CLI
 
-The jumpbox has [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started) preinstalled. To login to the IBM Cloud account open the terminal and execute the following command:
+The jumpbox has [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started) preinstalled. To log in to the IBM Cloud account, open the terminal and execute the following command:
 
 ```bash
 ibmcloud login --apikey "${IBMCLOUD_API_KEY}" -r us-east
@@ -129,9 +129,9 @@ on-prem-location-XX   cjn08upw04m4qsamrthg   normal   yes     21 hours ago   6 /
 
 </details>
 
-You should see two Satellite locations `aws-location-XX` is running on AWS hosts, while `on-prem-location-XX` runs on on-premises hosts.
+You should see two Satellite locations: `aws-location-XX` runs on AWS hosts, while `on-prem-location-XX` runs on on-premises hosts.
 
-To see the details and status of a Satellite location, you can use below command:
+To see the details and status of a Satellite location, you can use the following command:
 
 ```bash
 ibmcloud sat location get --location <location_name_or_ID>
@@ -171,7 +171,7 @@ Pod network interface selection method:   -
 
 </details>
 
-Hosts that have [sufficient compute, storage and network](https://cloud.ibm.com/docs/satellite?topic=satellite-host-reqs) can be [attached to a Satellite location](https://cloud.ibm.com/docs/satellite?topic=satellite-attach-hosts) by executing an attach script on the target machine. Once a machine is attached to a location, it can be assigned to run workloads, each location must have at least 3 machines assigned to run the control plane.
+Hosts that have [sufficient compute, storage and network](https://cloud.ibm.com/docs/satellite?topic=satellite-host-reqs) can be [attached to a Satellite location](https://cloud.ibm.com/docs/satellite?topic=satellite-attach-hosts) by executing an attach script on the target machine. Once a machine is attached to a location, it can be assigned to run workloads. Each location must have at least 3 machines assigned to run the control plane.
 
 To list hosts attached to a Satellite location, you can use:
 
@@ -233,9 +233,9 @@ public-services-XX   cjn0gvaw0gqg0kkgqf3g   normal   21 hours ago   1         aw
 
 </details>
 
-You should see two OpenShift clusters `intranet-XX` and `public-services-XX`. Note the "Location" column in the output, the `intranet-XX` cluster is deployed onto the `on-prem-location-XX` Satellite location, while the `public-services-XX` cluster is deployed onto `aws-location-XX`. [Creating an OpenShift cluster on a Satellite location](https://cloud.ibm.com/docs/openshift?topic=openshift-satellite-clusters) is pretty straight forward, you just need to select the target location when creating the cluster instead of selecting an IBM Cloud datacenter.
+You should see 2 OpenShift clusters `intranet-XX` and `public-services-XX`. Check the "Location" column in the output. Verify that the `intranet-XX` cluster is deployed onto the `on-prem-location-XX` Satellite location, while the `public-services-XX` cluster is deployed onto `aws-location-XX`. You can follow the instructions in [Creating an OpenShift cluster on a Satellite location](https://cloud.ibm.com/docs/openshift?topic=openshift-satellite-clusters). Make sure to select the target location when creating the cluster instead of selecting an IBM Cloud datacenter.
 
-To see the details and status of a cluster, you can use below command:
+To see the details and status of a cluster, you can use the following command:
 
 ```bash
 ibmcloud oc cluster get --cluster <cluster_name_or_ID>
@@ -282,7 +282,7 @@ URL:        https://oc4c81768101b964fdd9a-6b64a6ccc9c596bf59a86625d8fa2202-ce00.
 
 </details>
 
-To fetch the kubeconfig for a cluster, you can use the following command:
+To fetch the `kubeconfig` file for a cluster, you can use the following command:
 
 ```bash
 ibmcloud oc cluster config --cluster <cluster_name_or_ID> --admin
@@ -338,11 +338,11 @@ Not exactly. Fetch the kubeconfig using the <code>ibmcloud oc cluster config --c
 
 ## Task 2: Deploy and expose public company website
 
-In this task you are going to deploy the public website of _TechXchange Co._ (our imaginary company), add zones to a single-zone OpenShift cluster (`public-services-XX`) deployed on a multi-cloud location (`aws-location-XX`). You will learn how you can expose the app on locally on your machine for debugging purposes and how you can expose the application publicly through a custom domain.
+In this task, you are going to deploy the public website of _TechXchange Co._ (our imaginary company) and add zones to a single-zone OpenShift cluster (`public-services-XX`) deployed on a multi-cloud location (`aws-location-XX`). You will learn how to expose the app locally on your machine for debugging purposes and how to expose the application publicly through a custom domain.
 
 ### Deploy company website
 
-First, fetch the kubeconfig for the `public-services-XX`:
+First, fetch the `kubeconfig` file for the `public-services-XX` cluster:
 
 ```bash
 ibmcloud oc cluster config --cluster public-services-XX --admin
@@ -361,7 +361,7 @@ You can now execute 'kubectl' commands against your cluster. For example, run 'k
 
 </details>
 
-The declarative configuration of the company website is already prepared ([here](https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/public-website.yaml)), you just need to apply:
+The declarative configuration of the company website is already prepared ([here](https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/public-website.yaml)). You just need to apply:
 
 ```bash
 oc apply -f https://raw.githubusercontent.com/attiss/ibm-techxchange-2023-3670/main/applications/public-website.yaml
@@ -396,7 +396,7 @@ public-website-58c49f5f5d-gkw77   0/1     Pending   0          18s
 
 </details>
 
-Looks like the website is configured to run three replicas, but only one of them is running. This is because the deployment has [pod anti-affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity) configuration to ensure all pods are running on different nodes, but our cluster has only one node. Such an anti-affinity configuration helps increasing the resiliency of the application, if one of the node goes down only one of the pods will become unavailable and the other two will keep running and serving requests.
+Looks like the website is configured to run 2 replicas, but only 1 of them is running. This is because the deployment has [pod anti-affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity) configuration to ensure all pods are running on different nodes, but our cluster has only 1 node. Such an anti-affinity configuration helps increasing the resiliency of the application. If 1 of the node goes down, only 1 of the pods will become unavailable and the other 2 will keep running and serving requests.
 
 #### Quiz
 
@@ -423,11 +423,11 @@ Not exactly. This command lists the cluster nodes, but does not provide the exac
 
 ### Add zones to the single-zone `public-services-XX` cluster
 
-Single node clusters might be a good option if you want to reduce costs or want to simplify the management. However, if resiliency, workload isolation and security are important factors, then a multi-node setup is more suitable. 
+Single-node clusters might be a good option if you want to reduce costs or want to simplify the management. However, if resiliency, workload isolation and security are important factors, then a multi-node setup is more suitable. 
 
-As we already concluded earlier, the Satellite location where the `public-services-XX` cluster is deployed has two unassigned hosts. To automatically assign these hosts to the cluster, we are going to configure additional zones for the worker-pool of the cluster.
+As we already concluded earlier, the Satellite location where the `public-services-XX` cluster is deployed has 2 unassigned hosts. To automatically assign these hosts to the cluster, we are going to configure additional zones for the worker pool of the cluster.
 
-To see the details of the default worker-pool, execute the following command:
+To see the details of the default worker pool, execute the following command:
 
 ```bash
 ibmcloud oc worker-pool get --cluster public-services-XX --worker-pool default
@@ -459,7 +459,7 @@ us-east-1a   1         subnet-upi
 
 </details>
 
-The worker pool currently has only one zone configured (`us-east-1a`). If you add new zones to your worker pool, hosts that belong to that zone will get automatically assigned as they match the labels of the worker pool.
+The worker pool currently has only 1 zone configured (`us-east-1a`). If you add new zones to your worker pool, hosts that belong to that zone will get automatically assigned as they match the labels of the worker pool.
 
 Run the following commands to add the `us-east-1b` and `us-east-1c` zones:
 
@@ -501,7 +501,7 @@ ip-10-101-81-73    1e507db2359197562506   assigned   Ready    us-east-1b   publi
 
 </details>
 
-Now all the location hosts are assigned and the `public-services-XX` has one host in each of the zones (`us-east-1a`, `us-east-1b`, `us-east-1c`). It will take 10-15 minutes for the nodes to be fully ready. **You do not need to wait for the nodes to be provisioned to continue the lab tasks. We suggest to proceed with the next task and check back later if you have enough time.**
+Now all the location hosts are assigned and the `public-services-XX` has 1 host in each of the zones (`us-east-1a`, `us-east-1b`, `us-east-1c`). It will take 10-15 minutes for the nodes to be fully ready. **You do not need to wait for the nodes to be provisioned to continue the lab tasks. We suggest to proceed with the next task and check back later if you have enough time.**
 
 Once the provisioning is completed, you can see the nodes appearing:
 
@@ -521,7 +521,7 @@ ip-10-101-81-73.ec2.internal    Ready    master,worker   47m   v1.25.11+1485cc9
 
 </details>
 
-With sufficient amount of nodes the pods of our public website are running as expected:
+With sufficient number of nodes, the pods of our public website are running as expected:
 
 ```bash
 oc get pods -n public-website
@@ -568,9 +568,9 @@ Open Google Chrome on the jumpbox, and visit the http://localhost:8080 address.
 
 ### Expose company website to the internet
 
-You might remember from the [architecture diagram](#lab-architecture), that there is a network load balancer provisioned in your VPC. This load balancer is accessible from the internet and forwards traffic arriving to TCP80 and TCP443 into the nodes of the `public-services-XX` cluster.
+You might remember from the [architecture diagram](#lab-architecture) that there is a network load balancer provisioned in your VPC. This load balancer is accessible from the internet and forwards traffic arriving to `TCP80` and `TCP443` into the nodes of the `public-services-XX` cluster.
 
-The public IP address of this load balancer varies for each lab environment. Find the one belongs to you lab environment in the below table:
+The public IP address of this load balancer varies for each lab environment. Find the one belongs to you lab environment in the following table:
 
 |Lab attendee number|Load balancer address|
 |-------------------|---------------------|
@@ -638,7 +638,7 @@ OK
 
 </details>
 
-As a last step, you need to create a `Route` configuration to expose the public website on the using the OpenShift Ingress Controller. Since the `txc-3670-XX.us-south.satellite.appdomain.cloud` custom domain is a wildcard domain, you can use the `public.txc-3670-XX.us-south.satellite.appdomain.cloud` to expose the public website:
+As a last step, you need to create a `Route` configuration to expose the public website using the OpenShift Ingress Controller. Since the `txc-3670-XX.us-south.satellite.appdomain.cloud` custom domain is a wildcard domain, you can use the `public.txc-3670-XX.us-south.satellite.appdomain.cloud` to expose the public website:
 
 ```
 oc create route edge -n public-website public-website --service public-website --insecure-policy Redirect --hostname public.txc-3670-XX.us-south.satellite.appdomain.cloud
@@ -655,13 +655,13 @@ route.route.openshift.io/public-website created
 
 The DNS update might take a few minutes, but once the update is completed, you should be able to access _TechXchange Co._'s public website through the `public.txc-3670-XX.us-south.satellite.appdomain.cloud` URL.
 
-Open Google Chrome on the jumpbox again, and visit the https://public.txc-3670-XX.us-south.satellite.appdomain.cloud address. (You can also try opening the site from your mobile device.)
+Open Google Chrome on the jumpbox again, and visit the `https://public.txc-3670-XX.us-south.satellite.appdomain.cloud` address. (You can also try opening the site from your mobile device.)
 
 ![](images/expose-public.png)
 
 #### Quiz
 
-We managed to open the webpage using HTTPS and the browser evaluates the connection as secure. This is because for every managed domain (`*.satellite.appdomain.cloud` & `*.containers.appdomain.cloud`) IBM Cloud generates a TLS certificates. Who is the issuer of the certificate?
+We managed to open the webpage using HTTPS and the browser evaluates the connection as secure. This is because for every managed domain (`*.satellite.appdomain.cloud` and `*.containers.appdomain.cloud`) IBM Cloud generates a TLS certificates. Who is the issuer of the certificate?
 
 <details>
 <summary>Let's Encrypt</summary>
@@ -678,7 +678,7 @@ Not exactly. Run the <code>ibmcloud oc ingress domain get --cluster public-servi
 
 ## Task 3: Deploy intranet website and expose internally
 
-In this task you will learn how we deployed the intranet website of _TechXchange Co._ (our imaginary company) using [Satellite Config](https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config) to an OpenShift cluster (`intranet-XX`) deployed on a hybrid-cloud location (`on-prem-location-XX`). You will learn how you can manage custom TLS certificates using [IBM Cloud Secrets Manager](https://www.ibm.com/cloud/secrets-manager) and how you can expose an application through private DNS and secure communication with your custom TLS certificate.
+In this task, you will learn how we deployed the intranet website of _TechXchange Co._ (our imaginary company) using [Satellite Config](https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config) to an OpenShift cluster (`intranet-XX`) deployed on a hybrid-cloud location (`on-prem-location-XX`). You will learn how to manage custom TLS certificates using [IBM Cloud Secrets Manager](https://www.ibm.com/cloud/secrets-manager) and how to expose an application through private DNS and secure communication with your custom TLS certificate.
 
 ### Inspect Satellite Config of your intranet website deployment
 
@@ -687,7 +687,7 @@ With the help of Satellite Config, you can easily and consistently deploy, manag
 The setup consists of three steps:
 
 1. Creating a configuration that defines the resources to be deployed.
-    - For this lab, we created a configuration that watches the https://github.com/attiss/ibm-techxchange-2023-3670 public GitHub repository.
+    - For this lab, we created a configuration that watches the `https://github.com/attiss/ibm-techxchange-2023-3670` public GitHub repository.
 2. Creating cluster group(s) to deploy the resources to.
     - We created a group of clusters that includes all your `intranet-XX` clusters.
 3. Creating subscriptions to associate configuration(s) with cluster group(s).
@@ -697,7 +697,7 @@ Here is the overall configuration:
 
 ![](images/satellite-config.png)
 
-Now, let's check the application. First, fetch the kubeconfig for the `intranet-XX`:
+Now, let's check the application. First, fetch the `kubeconfig` file for the `intranet-XX` cluster:
 
 ```bash
 ibmcloud oc cluster config --cluster intranet-XX --admin
@@ -737,9 +737,9 @@ intranet-website-5679cf8d56-rbbcw   1/1     Running   0          52m
 
 ### Expose intranet website on the company network
 
-_TechXchange Co._'s DNS zone is `txc3670.private`, you are going to expose the intranet site on the `intranet-XX.txc3670.private`. This address has been already created by the DNS administrators for you and points to the ingress domain of your `intranet-XX` cluster. Let's validate if the DNS setup is correct.
+_TechXchange Co._'s DNS zone is `txc3670.private`. You are going to expose the intranet site on the `intranet-XX.txc3670.private`. This address has already been created by the DNS administrators for you and points to the Ingress domain of your `intranet-XX` cluster. Let's validate if the DNS setup is correct.
 
-To see the ingress domain of your `intranet-XX` cluster, use the following command:
+To see the Ingress domain of your `intranet-XX` cluster, use the following command:
 
 ```
 ibmcloud oc ingress domain ls --cluster intranet-XX
@@ -790,11 +790,11 @@ intranet-01-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000.us-east.containers.appdomain.c
 
 All right, the DNS configuration is now verified. The next step is to deploy a TLS certificate that has been issued by _TechXchange Co._'s internal CA. The administrators already generated a certificate for your `intranet-XX.txc3670.private` domain and uploaded it to an IBM Cloud Secrets Manager instance.
 
-Open https://cloud.ibm.com in Google Chrome and login with the provided credentials.
+Open `https://cloud.ibm.com` in Google Chrome and log in with the provided credentials.
 
 ![](images/ibm-cloud-login.png)
     
-Once logged in, select the `2579262 - itztsglenablement204` in the account selector.
+Once logged in, select the `2579262 - itztsglenablement204` account in the account selector.
 
 ![](images/ibm-cloud-account.png)
 
@@ -806,7 +806,7 @@ Go to the settings page and copy the instance CRN to the clipboard.
 
 ![](images/ibm-cloud-secrets-manager-crn.png)
 
-First, you will need to associate the `lab-secrets` Secrets Manager instance with the `intranet-XX` cluster. Go back to the terminal and run the following command:
+You will need to associate the `lab-secrets` Secrets Manager instance with the `intranet-XX` cluster. Go back to the terminal and run the following command:
 
 ```
 ibmcloud oc ingress instance register --crn <CRN> --cluster intranet-XX
@@ -821,7 +821,7 @@ OK
 
 </details>
 
-Let's get back to the Secret Manager instance, select the "Secrets" menu and find your own TLS certificate. Remember, the domain you are going to use is `intranet-XX.txc3670.private`, so look for that in the list.
+Let's get back to the Secret Manager instance. Select the "Secrets" menu and find your own TLS certificate. Remember, the domain you are going to use is `intranet-XX.txc3670.private`, so look for that in the list.
 
 ![](images/ibm-cloud-secrets-manager-secrets.png)
 
@@ -860,7 +860,7 @@ intranet-XX   kubernetes.io/tls   2      54s
 
 </details>
 
-At this point the DNS is verified, the secret with the TLS certificate exists on the cluster. The last step is to expose the intranet website with the OpenShift router. You can create an Ingress resource on the cluster with the appropriate configuration to achieve this.
+At this point the DNS is verified. The secret with the TLS certificate exists on the cluster. The last step is to expose the intranet website with the OpenShift router. You can create an Ingress resource on the cluster with the appropriate configuration to achieve this.
 
 Create a file using your favorite editor and save it as `ingress.yaml` with the following contents:
 
@@ -903,13 +903,13 @@ ingress.networking.k8s.io/intranet-website created
 
 </details>
 
-It is done, the intranet site should be available on the https://intranet-XX.txc3670.private domain now on the company's internal network. Open it in the browser to verify.
+It is done! The intranet site should be available on the `https://intranet-XX.txc3670.private` domain now on the company's internal network. Open it in the browser to verify.
 
 ![](images/expose-private.png)
 
 #### Quiz
 
-We managed to open the webpage using HTTPS and the browser evaluates the connection as secure even when using a custom certificate issued by _TechXchange Co._'s private CA. How this is possible?
+We managed to open the webpage using HTTPS and the browser evaluates the connection as secure even when using a custom certificate issued by _TechXchange Co._'s private CA. How is this possible?
 
 <details>
 <summary>The private CA is an intermediate CA and the certificate chain contains a public trusted CA.</summary>
@@ -927,11 +927,11 @@ That is correct! :star2:
 
 ## End of lab
 
-Congratulations for completing this lab, impressive work!
+Congratulations on completing this lab! Impressive work!
 
 To recap what you did today:
 
-- you got familiar with IBM Cloud Satellite
-- you learnt how you can deploy applications with Satellite Config
-- you exposed applications on your local machine for debugging purposes, publicly to the internet and privately to a secure network
-- you learnt how you can manage custom TLS certificates with IBM Cloud Secrets Manager
+- You got familiar with IBM Cloud Satellite.
+- You learnt how to deploy applications with Satellite Config.
+- You exposed applications on your local machine for debugging purposes, publicly to the internet and privately to a secure network.
+- You learnt how to manage custom TLS certificates with IBM Cloud Secrets Manager.
