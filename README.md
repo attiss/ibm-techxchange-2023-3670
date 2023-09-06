@@ -689,7 +689,7 @@ Not exactly. Run the <code>ibmcloud oc ingress domain get --cluster public-servi
 
 ## Task 3: Deploy intranet website and expose internally
 
-In this task, you will learn how we deployed the intranet website of _TechXchange Co._ (our imaginary company) using [Satellite Config](https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config) to an OpenShift cluster (`intranet-XX`) deployed on a hybrid-cloud location (`on-prem-location-XX`). You will learn how to manage custom TLS certificates using [IBM Cloud Secrets Manager](https://www.ibm.com/cloud/secrets-manager) and how to expose an application through private DNS and secure communication with your custom TLS certificate.
+In this task, you will learn how [Satellite Config](https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config) is set up to deploy the intranet website of _TechXchange Co._ (our imaginary company) to an OpenShift cluster (`intranet-XX`) deployed on a hybrid-cloud location (`on-prem-location-XX`). You will learn how to manage custom TLS certificates using [IBM Cloud Secrets Manager](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-getting-started) and how to expose an application through private DNS and secure communication with your custom TLS certificate.
 
 ### Inspect Satellite Config of your intranet website deployment
 
