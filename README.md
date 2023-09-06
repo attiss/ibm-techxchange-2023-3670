@@ -1,6 +1,6 @@
 # IBM TechXchange 2023 - Unleash the Power of Hybrid Multi-Cloud Applications with IBM Cloud Satellite [3670]
 
-A hybrid multi-cloud architecture offers a flexible and secure way to handle IT infrastructure, optimize costs, and ensure maximum uptime. But transforming your business to a hybrid multi-cloud architecture can be challenging. Meet IBM Cloud Satellite - your partner in running workloads across multiple environments including private clouds, public clouds, and on-premises. Ready to dive into a hands-on session with IBM Cloud Satellite? Join us to learn how you can securely and efficiently expose your applications running on multi-cloud infrastructure.
+Embracing a hybrid multi-cloud architecture can be transformative for businesses. It offers a flexible and secure way to handle IT infrastructure, optimize costs, and ensure maximum uptime. Meet IBM Cloud Satellite, your partner in running workloads across multiple environments — be it private or public clouds or on-premises. Ready to dive into a hands-on session with IBM Cloud Satellite? Join us to learn how you can securely and efficiently expose your applications running on multi-cloud infrastructure.
 
 **Session Type:** Hands-on Lab\
 **Tech Tracks:** Hybrid Cloud\
@@ -34,11 +34,11 @@ A hybrid multi-cloud architecture offers a flexible and secure way to handle IT 
 Your lab environment consist of the following components:
 
 - Satellite location running on AWS (multi-cloud use case):
-    - runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are assigned to the OpenShift cluster)
+    - runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are used as OpenShift workers)
 - OpenShift cluster running on AWS Satellite location:
     - workers are exposed publicly with an AWS load balancer
 - On-premises Satellite location (hybrid-cloud use case):
-    - runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are assigned to the OpenShift cluster)
+    - runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are used as OpenShift workers)
 - OpenShift cluster running on on-premises Satellite location
 - Jumpbox:
     - connects to the AWS VPC and to the on-premises infrastructure with VPN
@@ -134,7 +134,7 @@ You should see two Satellite locations: `aws-location-XX` runs on AWS hosts, whi
 To see the details and status of a Satellite location, you can use the following command:
 
 ```bash
-ibmcloud sat location get --location <location_name_or_ID>
+ibmcloud sat location get --location aws-location-XX
 ```
 
 <details>
@@ -176,7 +176,7 @@ Hosts that have [sufficient compute, storage and network](https://cloud.ibm.com/
 To list hosts attached to a Satellite location, you can use:
 
 ```bash
-ibmcloud sat host ls --location <location_name_or_ID>
+ibmcloud sat host ls --location aws-location-XX
 ```
 
 <details>
@@ -233,12 +233,12 @@ public-services-XX   cjn0gvaw0gqg0kkgqf3g   normal   21 hours ago   1         aw
 
 </details>
 
-You should see 2 OpenShift clusters `intranet-XX` and `public-services-XX`. Check the "Location" column in the output. Verify that the `intranet-XX` cluster is deployed onto the `on-prem-location-XX` Satellite location, while the `public-services-XX` cluster is deployed onto `aws-location-XX`. You can follow the instructions in [Creating an OpenShift cluster on a Satellite location](https://cloud.ibm.com/docs/openshift?topic=openshift-satellite-clusters). Make sure to select the target location when creating the cluster instead of selecting an IBM Cloud datacenter.
+You should see 2 OpenShift clusters: `intranet-XX` and `public-services-XX`. Check the "Location" column in the output. Verify that the `intranet-XX` cluster is deployed onto the `on-prem-location-XX` Satellite location, while the `public-services-XX` cluster is deployed onto `aws-location-XX`. [Creating OpenShift clusters on Satellite locations](https://cloud.ibm.com/docs/openshift?topic=openshift-satellite-clusters) is very similar to creating clusters on IBM Cloud infrastructure. The only significant difference is that you need to select a target Satellite location instead of an IBM Cloud datacenter or VPC.
 
 To see the details and status of a cluster, you can use the following command:
 
 ```bash
-ibmcloud oc cluster get --cluster <cluster_name_or_ID>
+ibmcloud oc cluster get --cluster intranet-XX
 ```
 
 <details>
@@ -282,10 +282,10 @@ URL:        https://oc4c81768101b964fdd9a-6b64a6ccc9c596bf59a86625d8fa2202-ce00.
 
 </details>
 
-To fetch the `kubeconfig` file for a cluster, you can use the following command:
+To fetch the Kubernetes configuration files for a cluster, you can use the following command:
 
 ```bash
-ibmcloud oc cluster config --cluster <cluster_name_or_ID> --admin
+ibmcloud oc cluster config --admin --cluster intranet-XX
 ```
 
 <details>
@@ -325,7 +325,7 @@ How many nodes does the `public-services-XX` cluster have?
 
 <details>
 <summary>3</summary>
-Not exactly. Fetch the kubeconfig using the <code>ibmcloud oc cluster config --cluster public-services-XX --admin</code> command and then list the nodes with the <code>oc get nodes</code> command.
+Not exactly. Fetch the Kubernetes configuration files using the <code>ibmcloud oc cluster config --cluster public-services-XX --admin</code> command and then list the nodes with the <code>oc get nodes</code> command.
 </details>
 <details>
 <summary>1</summary>
@@ -333,7 +333,7 @@ That is correct! :star2:
 </details>
 <details>
 <summary>6</summary>
-Not exactly. Fetch the kubeconfig using the <code>ibmcloud oc cluster config --cluster public-services-XX --admin</code> command and then list the nodes with the <code>oc get nodes</code> command.
+Not exactly. Fetch the Kubernetes configuration files using the <code>ibmcloud oc cluster config --cluster public-services-XX --admin</code> command and then list the nodes with the <code>oc get nodes</code> command.
 </details>
 
 ## Task 2: Deploy and expose public company website
@@ -342,7 +342,7 @@ In this task, you are going to deploy the public website of _TechXchange Co._ (o
 
 ### Deploy company website
 
-First, fetch the `kubeconfig` file for the `public-services-XX` cluster:
+First, fetch the Kubernetes configuration files for the `public-services-XX` cluster:
 
 ```bash
 ibmcloud oc cluster config --cluster public-services-XX --admin
@@ -465,7 +465,6 @@ Run the following commands to add the `us-east-1b` and `us-east-1c` zones:
 
 ```bash
 ibmcloud oc zone add satellite --cluster public-services-XX --zone us-east-1b --worker-pool default
-ibmcloud oc zone add satellite --cluster public-services-XX --zone us-east-1c --worker-pool default
 ```
 
 <details>
@@ -473,6 +472,18 @@ ibmcloud oc zone add satellite --cluster public-services-XX --zone us-east-1c --
 
 ```
 OK
+```
+
+</details>
+
+```bash
+ibmcloud oc zone add satellite --cluster public-services-XX --zone us-east-1c --worker-pool default
+```
+
+<details>
+<summary>Example output</summary>
+
+```
 OK
 ```
 
@@ -655,7 +666,7 @@ route.route.openshift.io/public-website created
 
 The DNS update might take a few minutes, but once the update is completed, you should be able to access _TechXchange Co._'s public website through the `public.txc-3670-XX.us-south.satellite.appdomain.cloud` URL.
 
-Open Google Chrome on the jumpbox again, and visit the `https://public.txc-3670-XX.us-south.satellite.appdomain.cloud` address. (You can also try opening the site from your mobile device.)
+Open Google Chrome on the jumpbox again, and visit the https://public.txc-3670-XX.us-south.satellite.appdomain.cloud address. (You can also try opening the site from your mobile device.)
 
 ![](images/expose-public.png)
 
@@ -697,7 +708,7 @@ Here is the overall configuration:
 
 ![](images/satellite-config.png)
 
-Now, let's check the application. First, fetch the `kubeconfig` file for the `intranet-XX` cluster:
+Now, let's check the application. First, fetch the Kubernetes configuration files for the `intranet-XX` cluster:
 
 ```bash
 ibmcloud oc cluster config --cluster intranet-XX --admin
@@ -737,7 +748,7 @@ intranet-website-5679cf8d56-rbbcw   1/1     Running   0          52m
 
 ### Expose intranet website on the company network
 
-_TechXchange Co._'s DNS zone is `txc3670.private`. You are going to expose the intranet site on the `intranet-XX.txc3670.private`. This address has already been created by the DNS administrators for you and points to the Ingress domain of your `intranet-XX` cluster. Let's validate if the DNS setup is correct.
+_TechXchange Co._'s DNS zone is `txc3670.private`. You are going to expose the intranet site on the `intranet-XX.txc3670.private`. This address has already been created for you and points to the Ingress domain of your `intranet-XX` cluster. Let's validate if the DNS setup is correct.
 
 To see the Ingress domain of your `intranet-XX` cluster, use the following command:
 
@@ -788,9 +799,9 @@ intranet-01-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000.us-east.containers.appdomain.c
 
 </details>
 
-All right, the DNS configuration is now verified. The next step is to deploy a TLS certificate that has been issued by _TechXchange Co._'s internal CA. The administrators already generated a certificate for your `intranet-XX.txc3670.private` domain and uploaded it to an IBM Cloud Secrets Manager instance.
+All right, the DNS configuration is now verified. The next step is to deploy a TLS certificate that has been issued by _TechXchange Co._'s internal CA. We already generated a certificate for your `intranet-XX.txc3670.private` domain and uploaded it to an IBM Cloud Secrets Manager instance.
 
-Open `https://cloud.ibm.com` in Google Chrome and log in with the provided credentials.
+Open https://cloud.ibm.com in Google Chrome and log in with the provided credentials.
 
 ![](images/ibm-cloud-login.png)
     
@@ -903,7 +914,7 @@ ingress.networking.k8s.io/intranet-website created
 
 </details>
 
-It is done! The intranet site should be available on the `https://intranet-XX.txc3670.private` domain now on the company's internal network. Open it in the browser to verify.
+It is done! The intranet site should be available on the https://intranet-XX.txc3670.private domain now on the company's internal network. Open it in the browser to verify.
 
 ![](images/expose-private.png)
 
