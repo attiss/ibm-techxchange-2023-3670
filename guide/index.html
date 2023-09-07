@@ -1,0 +1,1499 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IBM TechXchange 2023 / Unleash the Power of Hybrid Multi-Cloud Applications with IBM Cloud Satellite [3670]
+    </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="resources/lab-guide.css">
+</head>
+
+<body onload="checkCookie()">
+
+    <!-- header -->
+    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+        <div class="container-fluid d-flex align-items-center">
+            <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+                IBM TechXchange 2023 / Unleash the Power of Hybrid Multi-Cloud Applications with IBM Cloud Satellite [3670]
+            </h1>
+        </div>
+    </header>
+
+    <!-- right menu -->
+    <aside class="bd-aside sticky-xl-top text-body-secondary align-self-start mb-3 mb-xl-5 px-2">
+        <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">Attendee ID</h2>
+        <input id="attendee" type="number" class="form-control is-invalid" placeholder="XX" min="1" max="25" aria-label="Username">
+
+        <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">Table of contents</h2>
+        <nav class="small" id="toc">
+            <ul class="list-unstyled">
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#welcome-collapse" aria-controls="welcome-collapse">Welcome</button>
+                    <ul class="list-unstyled ps-3 collapse" id="welcome-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#session-details">Session details</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#lab-objectives">Lab objectives</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#lab-architecture">Lab architecture</a></li>
+                    </ul>
+                </li>
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#exercises-collapse" aria-controls="exercises-collapse">Exercises</button>
+                    <ul class="list-unstyled ps-3 collapse" id="exercises-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#exercise-1">Get familiar with your lab environment</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#exercise-2">Deploy and expose public company website</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#exercise-3">Expose intranet website internally</a></li>
+                    </ul>
+                </li>
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#end-of-lab-collapse" aria-controls="end-of-lab-collapse">End of lab</button>
+                    <ul class="list-unstyled ps-3 collapse" id="end-of-lab-collapse">
+                        <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#congratulations">Congratulations</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- body -->
+    <div class="bd-lab-guide container-fluid bg-body">
+
+        <!-- welcome -->
+        <section id="welcome">
+            <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Welcome</h2>
+
+            <!-- session details -->
+            <article class="my-3" id="session-details">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Session details</h3>
+                </div>
+
+                <div>
+                    <h1>IBM TechXchange 2023 / Unleash the Power of Hybrid Multi-Cloud Applications with IBM Cloud Satellite [3670]</h1>
+
+                    <p class="my-4">Embracing a hybrid multi-cloud architecture can be transformative for businesses. It offers a flexible and secure way to handle IT infrastructure, optimize costs, and ensure maximum uptime. Meet IBM Cloud Satellite, your partner in running workloads across multiple environments — be it private or public clouds or on-premises. Ready to dive into a hands-on session with IBM Cloud Satellite? Join us to learn how you can securely and efficiently expose your applications running on multi-cloud infrastructure.</p>
+
+                    <p class="my-4">
+                        <b>Session Type:</b> Hands-on Lab<br>
+                        <b>Tech Tracks:</b> Hybrid Cloud<br>
+                        <b>Session Topic:</b> Hybrid Cloud Software<br>
+                        <b>Industry:</b> Cross Industry<br>
+                        <b>Technical Level:</b> Intermediate Level<br>
+                    </p>
+
+                    <p class="mt-4"><b>Instructors:</b></p>
+                    <ul class="my-0">
+                        <li>Attila Fábián, Lead Software Engineer, IBM Cloud</li>
+                        <li>Attila Szűcs, Software Engineer, IBM Cloud</li>
+                    </ul>
+
+                    <p class="mt-4"><b>Coordinates:</b></p>
+                    <ul class="my-0">
+                        <li>Monday, Sep 11 5:00 PM - 6:30 PM PDT</li>
+                        <li>Boulevard 159, Level 1</li>
+                    </ul>
+
+                    <a class="btn btn-outline-primary mt-4" role="button" href="https://www.ibm.com/community/ibm-techxchange-catalog/?search=3670#/" target="_blank">See this session on the conference page</a>
+                </div>
+            </article>
+
+            <!-- lab objectives -->
+            <article class="my-3" id="lab-objectives">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Lab objectives</h3>
+                </div>
+
+                <div>
+                    <ol class="mt-4">
+                        <li>Get familiar with <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-getting-started" target="_blank">IBM Cloud Satellite</a>.</li>
+                        <li>Learn how to deploy applications with <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config" target="_blank">Satellite Config</a>.</li>
+                        <li>Explore ways to expose applications running on your Satellite location.</li>
+                        <li>Learn about <a href="https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-getting-started" target="_blank">IBM Cloud Secrets Manager</a> for secret management.</li>
+                    </ol>
+                </div>
+            </article>
+
+            <!-- lab arcitecture -->
+            <article class="my-3" id="lab-architecture">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Lab architecture</h3>
+                </div>
+
+                <div>
+                    <img class="img-fluid" src="images/lab-architecture.png" />
+                    <p class="my-4">Your lab environment consist of the following components:</p>
+
+                    <ul class="mt-4">
+                        <li>Satellite location running on AWS (multi-cloud use case):</li>
+                        <ul>
+                            <li>runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are used as OpenShift workers)</li>
+                        </ul>
+                        <li>OpenShift cluster running on AWS Satellite location:</li>
+                        <ul>
+                            <li>workers are exposed publicly with an AWS load balancer</li>
+                        </ul>
+                        <li>On-premises Satellite location (hybrid-cloud use case):</li>
+                        <ul>
+                            <li>runs with 6 hosts (3 hosts are assigned to the location control plane, 3 hosts are used as OpenShift workers)</li>
+                        </ul>
+                        <li>OpenShift cluster running on on-premises Satellite location</li>
+                        <li>Jumpbox:</li>
+                        <ul>
+                            <li>connects to the AWS VPC and to the on-premises infrastructure with VPN</li>
+                        </ul>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- exercises -->
+        <section id="exercises">
+            <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Exercises</h2>
+
+            <!-- exercise 1 -->
+            <article class="my-3" id="exercise-1">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Get familiar with your lab environment</h3>
+                </div>
+
+                <div>
+                    <p class="my-4">In this exercise, you are going to learn about the architecture of your lab environment and learn the basic commands for IBM Cloud Satellite and Red Hat OpenShift on IBM Cloud.</p>
+
+                    <h4>Open your jumpbox</h4>
+                    <p class="my-4">In the lab system, click the "Launch Lab" button.</p>
+                    <img class="img-fluid my-2" src="images/jumpbox1.png" />
+                    <p class="my-4">On the following page, you will see one virtual machine, that is your jumpbox. Click the Red Hat icon on the screen to connect.</p>
+                    <img class="img-fluid my-2" src="images/jumpbox2.png" />
+                    <p class="my-4">At this point you should be connected to the jumpbox.</p>
+                    <img class="img-fluid my-2" src="images/jumpbox3.png" />
+
+                    <h4>Login to the IBM Cloud account using CLI</h4>
+                    <p class="my-4">The jumpbox has <a href="https://cloud.ibm.com/docs/cli?topic=cli-getting-started" target="_blank">IBM Cloud CLI</a> preinstalled. To log in to the IBM Cloud account, open the terminal and execute the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd1-collapse" aria-expanded="false" aria-controls="cmd1-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd1-btn" onclick="copyContent('cmd1')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd1">ibmcloud login --apikey "${IBMCLOUD_API_KEY}" -r us-east</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd1-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    API endpoint: https://cloud.ibm.com
+                                    Authenticating...
+                                    OK
+                                    
+                                    Targeted account itztsglenablement204 (e54e9ad3662840dfa0293e1dac9df761) <-> 2579262
+                                    
+                                    Targeted region us-east
+                                    
+                                    
+                                    API endpoint:      https://cloud.ibm.com
+                                    Region:            us-east
+                                    User:              Attila.Szucs7@ibm.com
+                                    Account:           itztsglenablement204 (e54e9ad3662840dfa0293e1dac9df761) <-> 2579262
+                                    Resource group:    No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
+                                    CF API endpoint:
+                                    Org:
+                                    Space:
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">(Note: the <code>IBMCLOUD_API_KEY</code> environment variable contains an API key pregenerated for your lab user.)</p>
+
+                    <h4>Inspect Satellite locations</h4>
+                    <p class="my-4">To list Satellite locations, use the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd2-collapse" aria-expanded="false" aria-controls="cmd2-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd2-btn" onclick="copyContent('cmd2')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd2">ibmcloud sat location ls</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd2-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    Retrieving locations...
+                                    OK
+                                    Name                  ID                     Status   Ready   Created        Hosts (used/total)   Managed From
+                                    aws-location-XX       cjmvtshw0at4soomhl00   normal   yes     21 hours ago   4 / 6                wdc
+                                    on-prem-location-XX   cjn08upw04m4qsamrthg   normal   yes     21 hours ago   6 / 6                wdc
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">You should see 2 Satellite locations: <code>aws-location-<span class="attendeeid">XX</span></code> runs on AWS hosts, while <code>on-prem-location-<span class="attendeeid">XX</span></code> runs on on-premises hosts.</p>
+                    <p class="my-4">To see the details and status of a Satellite location, you can use following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd3-collapse" aria-expanded="false" aria-controls="cmd3-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd3-btn" onclick="copyContent('cmd3')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd3">ibmcloud sat location get --location aws-location-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd3-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    Retrieving location...
+                                    OK
+                                    
+                                    Name:                                     aws-location-XX
+                                    ID:                                       cjmvtshw0at4soomhl00
+                                    Created:                                  2023-08-29 16:21:38 +0200 (21 hours ago)
+                                    Managed From:                             wdc
+                                    State:                                    normal
+                                    Ready for deployments:                    yes
+                                    Message:                                  R0001: The Satellite location is ready for operations.
+                                    Pod subnet:                               172.16.0.0/16
+                                    Service subnet:                           172.20.0.0/16
+                                    Hosts Available:                          2
+                                    Hosts Total:                              6
+                                    Host Zones:                               us-east-1a, us-east-1b, us-east-1c
+                                    Provider:                                 -
+                                    Provider Region:                          -
+                                    Provider Credentials:                     no
+                                    Public Service Endpoint URL:              https://c107.us-east.satellite.cloud.ibm.com:32219
+                                    Private Service Endpoint URL:             -
+                                    OpenVPN Server Port:                      -
+                                    Ignition Server Port:                     -
+                                    Konnectivity Server Port:                 30881
+                                    Logging Key Set:                          no
+                                    Activity Tracker Key Set:                 no
+                                    Pod network interface selection method:   -
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Hosts that have <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-host-reqs" target="_blank">sufficient compute, storage and network</a> can be <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-attach-hosts" target="_blank">attached to a Satellite location</a> by executing an attach script on the target machine. Once a machine is attached to a location, it can be assigned to run workloads. Each location must have at least 3 machines assigned to run the control plane.</p>
+                    <p class="my-4">To list hosts attached to a Satellite location, you can use:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd4-collapse" aria-expanded="false" aria-controls="cmd4-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd4-btn" onclick="copyContent('cmd4')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd4">ibmcloud sat host ls --location aws-location-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark " id="cmd4-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    Retrieving hosts...
+                                    OK
+                                    Name               ID                     State        Status   Zone         Cluster              Worker ID                                                 Worker IP
+                                    ip-10-101-189-51   affa086f5ab748fc3f03   assigned     Ready    us-east-1c   infrastructure       sat-ip10101189-cba8e650ce7087939f4ee4d20f92573d982caa51   10.101.189.51
+                                    ip-10-101-189-58   1ee6da45821d4734c43f   unassigned   Ready    us-east-1c   -                    -                                                         -
+                                    ip-10-101-45-238   952758eef745ae5ef8ec   assigned     Ready    us-east-1a   public-services-01   sat-ip10101452-12154c4a2050a4fc7ad660c3cc2c1470da2b38f7   10.101.45.238
+                                    ip-10-101-51-202   699723991aef123ede21   assigned     Ready    us-east-1a   infrastructure       sat-ip10101512-d3e9119843c9f71835583840b54b160c4af5e24a   10.101.51.202
+                                    ip-10-101-77-68    47b4b3057641f3a21cb1   assigned     Ready    us-east-1b   infrastructure       sat-ip10101776-f4046769d74e1643e55d509de3783612e6118ce6   10.101.77.68
+                                    ip-10-101-81-73    1e507db2359197562506   unassigned   Ready    us-east-1b   -                    -                                                         -
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5>Quiz</h5>
+                    <p class="my-4">How many hosts does the <code>aws-location-<span class="attendeeid">XX</span></code> have and in what state?</p>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz1" id="quiz1option1" data-bs-toggle="modal" data-bs-target="#quiz1incorrect">
+                        <label class="form-check-label" for="quiz1option1">
+                            6 hosts in total: 3 assigned to the Satellite control plane (<code>infrastructure</code>), 3 assigned to an OpenShift cluster (<code>public-services-<span class="attendeeid">XX</span></code>)
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz1" id="quiz1option2" data-bs-toggle="modal" data-bs-target="#quiz1incorrect">
+                        <label class="form-check-label" for="quiz1option2">
+                            6 hosts in total: 3 assigned to the Satellite control plane (<code>infrastructure</code>), 3 unassigned
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz1" id="quiz1option3" data-bs-toggle="modal" data-bs-target="#quiz1correct">
+                        <label class="form-check-label" for="quiz1option3">
+                            6 hosts in total: 3 assigned to the Satellite control plane (<code>infrastructure</code>), 1 assigned to an OpenShift cluster (<code>public-services-<span class="attendeeid">XX</span></code>), 2 unassigned
+                        </label>
+                    </div>
+                    <div class="modal fade" id="quiz1correct" tabindex="-1" aria-labelledby="quiz1correctlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz1correctlabel">Correct!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Nice job! <i class="bi bi-stars"></i></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="quiz1incorrect" tabindex="-1" aria-labelledby="quiz1incorrectlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz1incorrectlabel">Not exactly!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Run the <code>ibmcloud sat hosts ls --location aws-location-<span class="attendeeid">XX</span></code> command and inspect the <code>State</code> and <code>Cluster</code> columns in the output.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Inspect OpenShift clusters</h4>
+                    <p class="my-4">To list clusters, use the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd5-collapse" aria-expanded="false" aria-controls="cmd5-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd5-btn" onclick="copyContent('cmd5')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd5">ibmcloud oc cluster ls</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd5-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    OK
+                                    Name                 ID                     State    Created        Workers   Location              Version                  Resource Group Name   Provider
+                                    intranet-XX          cjn0s0mw0qj9takgqf40   normal   21 hours ago   3         on-prem-location-XX   4.12.24_1552_openshift   3670-lab-XX           satellite
+                                    public-services-XX   cjn0gvaw0gqg0kkgqf3g   normal   21 hours ago   1         aws-location-XX       4.12.24_1552_openshift   3670-lab-XX           satellite
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">You should see 2 OpenShift clusters: <code>intranet-<span class="attendeeid">XX</span></code> and <code>public-services-<span class="attendeeid">XX</span></code>. Check the "Location" column in the output. Verify that the <code>intranet-<span class="attendeeid">XX</span></code> cluster is deployed onto the <code>on-prem-location-<span class="attendeeid">XX</span></code> Satellite location, while the <code>public-services-<span class="attendeeid">XX</span></code> cluster is deployed onto <code>aws-location-<span class="attendeeid">XX</span></code>. <a href="https://cloud.ibm.com/docs/openshift?topic=openshift-satellite-clusters" target="_blank">Creating OpenShift clusters on Satellite locations</a> is very similar to creating clusters on IBM Cloud infrastructure. The only significant difference is that you need to select a target Satellite location instead of an IBM Cloud datacenter or VPC.</p>
+                    <p class="my-4">To see the details and status of a cluster, you can use the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd6-collapse" aria-expanded="false" aria-controls="cmd6-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd6-btn" onclick="copyContent('cmd6')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd6">ibmcloud oc cluster get --cluster intranet-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd6-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    Retrieving cluster intranet-XX...
+                                    OK
+
+                                    Name:                                     intranet-XX
+                                    ID:                                       cjn0s0mw0qj9takgqf40
+                                    State:                                    normal
+                                    Status:                                   All Workers Normal
+                                    Created:                                  2023-08-29 17:25:54 +0200 (21 hours ago)
+                                    Resource Group ID:                        5b0abcb5b3784498a534713cf6274ffb
+                                    Resource Group Name:                      3670-lab-01
+                                    Pod Subnet:                               172.30.0.0/16
+                                    Service Subnet:                           172.21.0.0/16
+                                    Workers:                                  3
+                                    Worker Zones:                             us-east-1, us-east-2, us-east-3
+                                    Ingress Subdomain:                        intranet-XX-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000.us-east.containers.appdomain.cloud
+                                    Ingress Secret:                           intranet-XX-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000
+                                    Ingress Status:                           healthy
+                                    Ingress Message:                          All Ingress components are healthy.
+                                    Public Service Endpoint URL:              https://c-01.private.us-east.link.satellite.cloud.ibm.com:33560
+                                    Private Service Endpoint URL:             https://oc4c81768101b964fdd9a-6b64a6ccc9c596bf59a86625d8fa2202-ce00.us-east.satellite.appdomain.cloud:30229
+                                    Pull Secrets:                             enabled in the default namespace
+                                    VPCs:                                     -
+                                    VPE:                                      -
+                                    Pod network interface selection method:   -
+                                    Infrastructure topology:                  highly-available
+                                    
+                                    Master
+                                    Status:     Ready (21 hours ago)
+                                    State:      deployed
+                                    Health:     normal
+                                    Version:    4.12.24_1552_openshift
+                                    Location:   on-prem-location-01
+                                    URL:        https://oc4c81768101b964fdd9a-6b64a6ccc9c596bf59a86625d8fa2202-ce00.us-east.satellite.appdomain.cloud:30229
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">To fetch the Kubernetes configuration files for a cluster, you can use the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd7-collapse" aria-expanded="false" aria-controls="cmd7-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd7-btn" onclick="copyContent('cmd7')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd7">ibmcloud oc cluster config --admin --cluster intranet-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd7-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    OK
+                                    The configuration for cjn0s0mw0qj9takgqf40 was downloaded successfully.
+                                    
+                                    Added context for cjn0s0mw0qj9takgqf40 to the current kubeconfig file.
+                                    You can now execute 'kubectl' commands against your cluster. For example, run 'kubectl get nodes'.
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">At this point you should be able to execute <code>kubectl</code> or <code>oc</code> commands, for example:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd8-collapse" aria-expanded="false" aria-controls="cmd8-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd8-btn" onclick="copyContent('cmd8')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd8">oc get nodes</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd8-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    NAME                      STATUS   ROLES           AGE   VERSION
+                                    techxchange-3670-host-3   Ready    master,worker   23h   v1.25.11+1485cc9
+                                    techxchange-3670-host-4   Ready    master,worker   23h   v1.25.11+1485cc9
+                                    techxchange-3670-host-5   Ready    master,worker   23h   v1.25.11+1485cc9
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5>Quiz</h5>
+                    <p class="my-4">How many nodes does the <code>public-services-<span class="attendeeid">XX</span></code> cluster have?</p>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz2" id="quiz2option1" data-bs-toggle="modal" data-bs-target="#quiz2incorrect">
+                        <label class="form-check-label" for="quiz2option1">
+                            3
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz2" id="quiz2option2" data-bs-toggle="modal" data-bs-target="#quiz2correct">
+                        <label class="form-check-label" for="quiz2option2">
+                            1
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz2" id="quiz2option3" data-bs-toggle="modal" data-bs-target="#quiz2incorrect">
+                        <label class="form-check-label" for="quiz2option3">
+                            6
+                        </label>
+                    </div>
+                    <div class="modal fade" id="quiz2correct" tabindex="-1" aria-labelledby="quiz2correctlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz2correctlabel">Correct!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Nice job! <i class="bi bi-stars"></i></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="quiz2incorrect" tabindex="-1" aria-labelledby="quiz2incorrectlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz2incorrectlabel">Not exactly!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Fetch the Kubernetes configuration files using the <code>ibmcloud oc cluster config --admin --cluster public-services-<span class="attendeeid">XX</span></code> command and then list the nodes with the <code>oc get nodes</code> command.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- exercise 2 -->
+            <article class="my-3" id="exercise-2">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Deploy and expose public company website</h3>
+                </div>
+
+                <div>
+                    <p class="my-4">In this exercise, you are going to deploy the public website of <i>TechXchange Co.</i> (our imaginary company) and add zones to a single-zone OpenShift cluster (<code>public-services-<span class="attendeeid">XX</span></code>) deployed on a multi-cloud location (<code>aws-location-<span class="attendeeid">XX</span></code>). You will learn how to expose the app locally on your machine for debugging purposes and how to expose the application publicly through a custom domain.</p>
+
+                    <h4>Deploy company website</h4>
+                    <p class="my-4">First, fetch the Kubernetes configuration files for the <code>public-services-<span class="attendeeid">XX</span></code> cluster:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd9-collapse" aria-expanded="false" aria-controls="cmd9-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd9-btn" onclick="copyContent('cmd9')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd9">ibmcloud oc cluster config --admin --cluster public-services-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd9-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    OK
+                                    The configuration for cjn0gvaw0gqg0kkgqf3g was downloaded successfully.
+                                    
+                                    Added context for cjn0gvaw0gqg0kkgqf3g to the current kubeconfig file.
+                                    You can now execute 'kubectl' commands against your cluster. For example, run 'kubectl get nodes'.
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">The declarative configuration of the company website is already prepared (<a href="https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/public-website.yaml" target="_blank">here</a>). You just need to apply:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd10-collapse" aria-expanded="false" aria-controls="cmd10-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd10-btn" onclick="copyContent('cmd10')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd10">oc apply -f https://raw.githubusercontent.com/attiss/ibm-techxchange-2023-3670/main/applications/public-website.yaml</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd10-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    namespace/public-website created
+                                    deployment.apps/public-website created
+                                    service/public-website created
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Let's check if the pods are running as expected:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd11-collapse" aria-expanded="false" aria-controls="cmd11-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd11-btn" onclick="copyContent('cmd11')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd11">oc get pods -n public-website</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd11-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    NAME                              READY   STATUS    RESTARTS   AGE
+                                    public-website-58c49f5f5d-2vl98   1/1     Running   0          18s
+                                    public-website-58c49f5f5d-78dcg   0/1     Pending   0          18s
+                                    public-website-58c49f5f5d-gkw77   0/1     Pending   0          18s
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Looks like the website is configured to run 2 replicas, but only 1 of them is running. This is because the deployment has <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity" target="_blank">pod anti-affinity</a> configuration to ensure all pods are running on different nodes, but our cluster has only 1 node. Such an anti-affinity configuration helps increasing the resiliency of the application. If 1 of the node goes down, only 1 of the pods will become unavailable and the other 2 will keep running and serving requests.</p>
+
+                    <h5>Quiz</h5>
+                    <p class="my-4">Which command can you use to determine the cause of the <code>Pending</code> pod state?</p>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz3" id="quiz3option1" data-bs-toggle="modal" data-bs-target="#quiz3correct">
+                        <label class="form-check-label" for="quiz3option1">
+                            <code>oc describe pod -n public-website public-website-..........-.....</code>
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz3" id="quiz3option2" data-bs-toggle="modal" data-bs-target="#quiz3incorrect">
+                        <label class="form-check-label" for="quiz3option2">
+                            <code>oc get nodes</code>
+                        </label>
+                    </div>
+                    <div class="modal fade" id="quiz3correct" tabindex="-1" aria-labelledby="quiz3correctlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz3correctlabel">Correct!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Nice job! <i class="bi bi-stars"></i></p>
+                                    <p class="my-4">If you execute the command, you should see a similar message appearing in the <code>Events</code> section:</p>
+                                    <pre>
+                                        Events:
+                                        Type     Reason            Age                From               Message
+                                        ----     ------            ----               ----               -------
+                                        Warning  FailedScheduling  16s (x8 over 14m)  default-scheduler  0/1 nodes are available: 1 node(s) didn't match pod anti-affinity rules. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+                                    </pre>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="quiz3incorrect" tabindex="-1" aria-labelledby="quiz3incorrectlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz3incorrectlabel">Not exactly!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">This command lists the cluster nodes, but does not provide the exact cause why the pod could not be scheduled.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Add zones to the single-zone <code>public-services-<span class="attendeeid">XX</span></code> cluster</h4>
+                    <p class="my-4">Single-node clusters might be a good option if you want to reduce costs or want to simplify the management. However, if resiliency, workload isolation and security are important factors, then a multi-node setup is more suitable.</p>
+                    <p class="my-4">As we already concluded earlier, the Satellite location where the <code>public-services-<span class="attendeeid">XX</span></code> cluster is deployed has 2 unassigned hosts. To automatically assign these hosts to the cluster, we are going to configure additional zones for the worker pool of the cluster.</p>
+                    <p class="my-4">To see the details of the default worker pool, execute the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd12-collapse" aria-expanded="false" aria-controls="cmd12-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd12-btn" onclick="copyContent('cmd12')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd12">ibmcloud oc worker-pool get --worker-pool default --cluster public-services-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd12-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    Retrieving worker pool default from cluster public-services-XX...
+                                    OK
+                                    
+                                    Name:               default
+                                    ID:                 cjn0gvaw0gqg0kkgqf3g-8ed8119
+                                    State:              active
+                                    Hardware:           shared
+                                    Operating System:   REDHAT_8_64
+                                    VPC:                -
+                                    Flavor:             upi
+                                    Host Labels:        env=prod,os=RHEL8
+                                    Labels:             ibm-cloud.kubernetes.io/worker-pool-id=cjn0gvaw0gqg0kkgqf3g-8ed8119
+                                    Workers per Zone:   1
+                                    Total Workers:      1
+                                    
+                                    Zones
+                                    Zone         Workers   Subnets
+                                    us-east-1a   1         subnet-upi
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">The worker pool currently has only 1 zone configured (<code>us-east-1a</code>). If you add new zones to your worker pool, hosts that belong to that zone will get automatically assigned as they match the labels of the worker pool.</p>
+                    <p class="my-4">Run the following commands to add the <code>us-east-1b</code> and <code>us-east-1c zones</code>:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd13-collapse" aria-expanded="false" aria-controls="cmd13-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd13-btn" onclick="copyContent('cmd13')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd13">ibmcloud oc zone add satellite --zone us-east-1b --worker-pool default --cluster public-services-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd13-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    OK
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd14-collapse" aria-expanded="false" aria-controls="cmd14-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd14-btn" onclick="copyContent('cmd14')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd14">ibmcloud oc zone add satellite --zone us-east-1c --worker-pool default --cluster public-services-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd14-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    OK
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">That was easy. Let's see the host assignments now:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd15-collapse" aria-expanded="false" aria-controls="cmd15-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd15-btn" onclick="copyContent('cmd15')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd15">ibmcloud sat host ls --location aws-location-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd15-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    Retrieving hosts...
+                                    OK
+                                    Name               ID                     State      Status         Zone         Cluster              Worker ID                                                 Worker IP
+                                    ip-10-101-189-51   affa086f5ab748fc3f03   assigned   Ready          us-east-1c   infrastructure       sat-ip10101189-cba8e650ce7087939f4ee4d20f92573d982caa51   10.101.189.51
+                                    ip-10-101-189-58   1ee6da45821d4734c43f   assigned   Provisioning   us-east-1c   public-services-XX   sat-ip10101189-93e38f7b54843630c3154699cba9c19b4e802485   10.101.189.58
+                                    ip-10-101-45-238   952758eef745ae5ef8ec   assigned   Ready          us-east-1a   public-services-XX   sat-ip10101452-12154c4a2050a4fc7ad660c3cc2c1470da2b38f7   10.101.45.238
+                                    ip-10-101-51-202   699723991aef123ede21   assigned   Ready          us-east-1a   infrastructure       sat-ip10101512-d3e9119843c9f71835583840b54b160c4af5e24a   10.101.51.202
+                                    ip-10-101-77-68    47b4b3057641f3a21cb1   assigned   Ready          us-east-1b   infrastructure       sat-ip10101776-f4046769d74e1643e55d509de3783612e6118ce6   10.101.77.68
+                                    ip-10-101-81-73    1e507db2359197562506   assigned   Provisioning   us-east-1b   public-services-XX   sat-ip10101817-3a851bca9528391d038e6666a1ee8653d719a04c   10.101.81.73
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Now all the location hosts are assigned and the <code>public-services-<span class="attendeeid">XX</span></code> has 1 host in each of the zones (<code>us-east-1a</code>, <code>us-east-1b</code>, <code>us-east-1c</code>). It will take 10-15 minutes for the nodes to be fully ready. <b>You do not need to wait for the nodes to be provisioned to continue the lab tasks. We suggest to proceed with the next task and check back later if you have enough time.</b></p>
+                    <p class="my-4">Once the provisioning is completed, you can see the nodes appearing:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd16-collapse" aria-expanded="false" aria-controls="cmd16-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd16-btn" onclick="copyContent('cmd16')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd16">oc get node</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd16-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    NAME                            STATUS   ROLES           AGE   VERSION
+                                    ip-10-101-189-58.ec2.internal   Ready    master,worker   48m   v1.25.11+1485cc9
+                                    ip-10-101-45-238.ec2.internal   Ready    master,worker   30h   v1.25.11+1485cc9
+                                    ip-10-101-81-73.ec2.internal    Ready    master,worker   47m   v1.25.11+1485cc9
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">With sufficient number of nodes, the pods of our public website are running as expected:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd17-collapse" aria-expanded="false" aria-controls="cmd17-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd17-btn" onclick="copyContent('cmd17')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd17">oc get pods -n public-website</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd17-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    NAME                              READY   STATUS    RESTARTS   AGE
+                                    public-website-58c49f5f5d-2vl98   1/1     Running   0          101m
+                                    public-website-58c49f5f5d-78dcg   1/1     Running   0          101m
+                                    public-website-58c49f5f5d-gkw77   1/1     Running   0          101m
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Expose company website on your local machine</h4>
+                    <p class="my-4">Sometimes it is useful to expose applications on your local machine for debugging purposes. The port forward feature provided by Kubernetes makes this possible for you: the Kubernetes API server establishes a secure HTTP connection and forwards traffic from a designated local port to the specified pod(s) within the cluster.</p>
+                    <p class="my-4">Let's expose the public website locally:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd18-collapse" aria-expanded="false" aria-controls="cmd18-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd18-btn" onclick="copyContent('cmd18')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd18">oc port-forward -n public-website deployment/public-website 8080</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd18-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    Forwarding from 127.0.0.1:8080 -> 8080
+                                    Forwarding from [::1]:8080 -> 8080
+                                    
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Open Google Chrome on the jumpbox, and visit the <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> address.</p>
+                    <img class="img-fluid my-2" src="images/expose-localhost.png" />
+                    <p class="my-4">(To close the port-forward, press <kbd>Ctrl</kbd> + <kbd>c</kbd>.)</p>
+
+                    <h4>Expose company website to the internet</h4>
+                    <p class="my-4">You might remember from the <a href="#lab-architecture">architecture diagram</a> that there is a network load balancer provisioned in your VPC. This load balancer is accessible from the internet and forwards traffic arriving to <code>TCP80</code> and <code>TCP443</code> into the nodes of the <code>public-services-<span class="attendeeid">XX</span></code> cluster.</p>
+                    <p class="my-4">The public IP address of this load balancer varies for each lab environment, your IP address is: <code><span class="attendee-public-ip">X.X.X.X</span></code>.</p>
+                    <p class="my-4">We prepared a custom default domain for your cluster: <code>txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</code>.</p>
+                    <p class="my-4">To see the current configuration of the domain, you can use:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd19-collapse" aria-expanded="false" aria-controls="cmd19-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd19-btn" onclick="copyContent('cmd19')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd19">ibmcloud oc ingress domain get --cluster public-services-<span class="attendeeid">XX</span> --domain txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd19-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    OK
+
+                                    Cluster:            cjo5ulkd009t2f5vk2hg
+                                    Domain:             txc-3670-XX.us-south.satellite.appdomain.cloud
+                                    Target(s):          10.101.31.228, 10.101.152.230, 10.101.67.119
+                                    Provider:           akamai
+                                    Default:            yes
+                                    Status:             OK
+                                    Cert Provider:      lets_encrypt
+                                    Secret Name:        txc-3670-01
+                                    Secret Namespace:   openshift-ingress
+                                    Secret Status:      created
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Note that currently private IP addresses are registered (the host addresses). Let's replace the addresses with the public load balancer's IP address:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd20-collapse" aria-expanded="false" aria-controls="cmd20-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd20-btn" onclick="copyContent('cmd20')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd20">ibmcloud oc ingress domain update --cluster public-services-<span class="attendeeid">XX</span> --domain txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud  --ip <span class="attendee-public-ip">X.X.X.X</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd20-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    OK
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">As a last step, you need to create a Route configuration to expose the public website using the OpenShift Ingress Controller. Since the <code>txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</code> custom domain is a wildcard domain, you can use the <code>public.txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</code> to expose the public website:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd21-collapse" aria-expanded="false" aria-controls="cmd21-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd21-btn" onclick="copyContent('cmd21')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd21">oc create route edge -n public-website public-website --service public-website --insecure-policy Redirect --hostname public.txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd21-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                    route.route.openshift.io/public-website created
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">The DNS update might take a few minutes, but once the update is completed, you should be able to access <i>TechXchange Co.</i>'s public website through the <code>public.txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</code> URL.</p>
+                    <p class="my-4">Open Google Chrome on the jumpbox again, and visit the <a id="attendee-public-url" href="https://public.txc-3670-XX.us-south.satellite.appdomain.cloud" target="_blank">https://public.txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</a> address.
+                    <img class="img-fluid my-2" src="images/expose-public.png" />
+                    <p class="my-4">You can also open the site from your mobile device by scanning the below QR code:</p>
+                    <div id="qrcode" class="m-0 p-1"></div>
+
+                    <h5>Quiz</h5>
+                    <p class="my-4">We managed to open the webpage using HTTPS and the browser evaluates the connection as secure. This is because for every managed domain (<code>*.satellite.appdomain.cloud</code> and <code>*.containers.appdomain.cloud</code>) IBM Cloud generates a TLS certificates. Who is the issuer of the certificate?</p>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz4" id="quiz4option1" data-bs-toggle="modal" data-bs-target="#quiz4correct">
+                        <label class="form-check-label" for="quiz4option1">
+                            Let's Encrypt
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz4" id="quiz4option2" data-bs-toggle="modal" data-bs-target="#quiz4incorrect">
+                        <label class="form-check-label" for="quiz4option2">
+                            IBM Cloud CA
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz4" id="quiz4option3" data-bs-toggle="modal" data-bs-target="#quiz4incorrect">
+                        <label class="form-check-label" for="quiz4option2">
+                            It is a self signed cert, but the browser trusts it
+                        </label>
+                    </div>
+                    <div class="modal fade" id="quiz4correct" tabindex="-1" aria-labelledby="quiz4correctlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz4correctlabel">Correct!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Nice job! <i class="bi bi-stars"></i></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="quiz4incorrect" tabindex="-1" aria-labelledby="quiz4incorrectlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz4incorrectlabel">Not exactly!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Run the <code>ibmcloud oc ingress domain get --cluster public-services-<span class="attendeeid">XX</span> --domain txc-3670-<span class="attendeeid">XX</span>.us-south.satellite.appdomain.cloud</code> command again and inspect <code>Cert Provider</code> field in the output.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- exercise 3 -->
+            <article class="my-3" id="exercise-3">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Expose intranet website internally</h3>
+                </div>
+
+                <div>
+                    <p class="my-4">In this task, you will learn how <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config" target="_blank">Satellite Config</a> is set up to deploy the intranet website of <i>TechXchange Co.</i> to an OpenShift cluster (<code>intranet-<span class="attendeeid">XX</span></code>) deployed on a hybrid-cloud location (<code>on-prem-location-<span class="attendeeid">XX</span></code>). You will learn how to manage custom TLS certificates using <a href="https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-getting-started" target="_blank">IBM Cloud Secrets Manager</a> and how to expose an application through private DNS and secure communication with your custom TLS certificate.</p>
+
+                    <h4>Inspect Satellite Config of your intranet website deployment</h4>
+                    <p class="my-4">With the help of Satellite Config, you can easily and consistently deploy, manage, and control your applications and policies across clusters and locations. In this section you are going to learn how we set up Satellite Config to deploy the intranet website using a GitOps approach. The Kubernetes resources are located in a <a href="https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/intranet-website.yaml" target="_blank">public GitHub repository</a>.</p>
+                    <p class="mt-4">The setup consists of three steps:</p>
+                    <ul class="my-0">
+                        <li>Creating a configuration that defines the resources to be deployed.</li>
+                        <ul>
+                            <li>For this lab, we created a configuration that watches the <code>https://github.com/attiss/ibm-techxchange-2023-3670</code> public GitHub repository.</li>
+                        </ul>
+                        <li>Creating cluster group(s) to deploy the resources to.</li>
+                        <ul>
+                            <li>We created a group of clusters that includes all your <code>intranet-<span class="attendeeid">XX</span></code> clusters.</li>
+                        </ul>
+                        <li>Creating subscriptions to associate configuration(s) with cluster group(s).</li>
+                        <ul>
+                            <li>We created a subscription to associate the GitOps configuration with the cluster group.</li>
+                        </ul>
+                    </ul>
+                    <p class="my-4">Here is the overall configuration:</p>
+                    <img class="img-fluid my-2" src="images/satellite-config.png" />
+                    <p class="my-4">Now, let's check the application. First, fetch the Kubernetes configuration files for the <code>intranet-<span class="attendeeid">XX</span></code> cluster:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd22-collapse" aria-expanded="false" aria-controls="cmd22-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd22-btn" onclick="copyContent('cmd22')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd22">ibmcloud oc cluster config --admin --cluster intranet-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd22-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        OK
+                                        The configuration for intranet-XX was downloaded successfully.
+                                        
+                                        Added context for intranet-XX to the current kubeconfig file.
+                                        You can now execute 'kubectl' commands against your cluster. For example, run 'kubectl get nodes'.
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Check if the <code>intranet-website</code> pods are running in the <code>intranet-website</code> namespace:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd23-collapse" aria-expanded="false" aria-controls="cmd23-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd23-btn" onclick="copyContent('cmd23')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd23">oc get pods -n intranet-website</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd23-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        NAME                                READY   STATUS    RESTARTS   AGE
+                                        intranet-website-5679cf8d56-bk9md   1/1     Running   0          52m
+                                        intranet-website-5679cf8d56-cgm8x   1/1     Running   0          52m
+                                        intranet-website-5679cf8d56-rbbcw   1/1     Running   0          52m
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Expose intranet website on the company network</h4>
+                    <p class="my-4"><i>TechXchange Co.</i>'s DNS zone is <code>txc3670.private</code>. You are going to expose the intranet site on the <code>intranet-<span class="attendeeid">XX</span>.txc3670.private</code>. This address has already been created for you and points to the Ingress domain of your <code>intranet-<span class="attendeeid">XX</span></code> cluster. Let's validate if the DNS setup is correct.</p>
+                    <p class="my-4">To see the Ingress domain of your <code>intranet-<span class="attendeeid">XX</span></code> cluster, use the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd24-collapse" aria-expanded="false" aria-controls="cmd24-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd24-btn" onclick="copyContent('cmd24')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd24">ibmcloud oc ingress domain ls --cluster intranet-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd24-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        OK
+                                        Domain                                                                                 Target(s)                 Default   Provider   Secret Status   Status
+                                        intranet-XX-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000.us-east.containers.appdomain.cloud   10.241.0.6,10.241.128.5   yes       akamai     created         OK
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Try resolving the <code>intranet-<span class="attendeeid">XX</span>.txc3670.private</code> domain and compare the addresses:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd25-collapse" aria-expanded="false" aria-controls="cmd25-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd25-btn" onclick="copyContent('cmd25')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd25">dig intranet-<span class="attendeeid">XX</span>.txc3670.private</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd25-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        ; <<>> DiG 9.16.1-Ubuntu <<>> intranet-01.txc3670.private
+                                        ;; global options: +cmd
+                                        ;; Got answer:
+                                        ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44188
+                                        ;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 0
+                                        
+                                        ;; QUESTION SECTION:
+                                        ;intranet-01.txc3670.private.	IN	A
+                                        
+                                        ;; ANSWER SECTION:
+                                        intranet-01.txc3670.private. 60	IN	CNAME	intranet-01-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000.us-east.containers.appdomain.cloud.
+                                        intranet-01-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000.us-east.containers.appdomain.cloud. 60 IN A 10.241.0.6
+                                        intranet-01-e43ebe1e9ac7c5f7ba5fce9d3d1e6c08-0000.us-east.containers.appdomain.cloud. 60 IN A 10.241.128.5
+                                        
+                                        ;; Query time: 108 msec
+                                        ;; SERVER: 161.26.0.7#53(161.26.0.7)
+                                        ;; WHEN: Thu Aug 31 23:52:33 CEST 2023
+                                        ;; MSG SIZE  rcvd: 370
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">All right, the DNS configuration is now verified. The next step is to deploy a TLS certificate that has been issued by <i>TechXchange Co.</i>'s internal CA. We already generated a certificate for your <code>intranet-<span class="attendeeid">XX</span>.txc3670.private</code> domain and uploaded it to an IBM Cloud Secrets Manager instance.</p>
+                    <p class="my-4">Open <a href="https://cloud.ibm.com" target="_blank">https://cloud.ibm.com</a> in Google Chrome and log in with the provided credentials.</p>
+                    <img class="img-fluid my-2" src="images/ibm-cloud-login.png" />
+                    <p class="my-4">Once logged in, select the <code>2579262 - itztsglenablement204</code> account in the account selector.</p>
+                    <img class="img-fluid my-2" src="images/ibm-cloud-account.png" />
+                    <p class="my-4">Open the resource list view from the left hand menu, then scroll down to the <code>Security</code> section. Open the IBM Cloud Secrets Manager instance named <code>lab-secrets</code>.</p>
+                    <img class="img-fluid my-2" src="images/ibm-cloud-resource-list.png" />
+                    <p class="my-4">Go to the settings page and copy the instance CRN to the clipboard.</p>
+                    <img class="img-fluid my-2" src="images/ibm-cloud-secrets-manager-crn.png" />
+                    <p class="my-4">You will need to associate the <code>lab-secrets</code> Secrets Manager instance with the <code>intranet-<span class="attendeeid">XX</span></code> cluster. Go back to the terminal and run the following command:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd26-collapse" aria-expanded="false" aria-controls="cmd26-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd26-btn" onclick="copyContent('cmd26')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd26">ibmcloud oc ingress instance register --cluster intranet-<span class="attendeeid">XX</span> --crn CRN</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd26-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        OK
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Let's get back to the Secret Manager instance. Select the <code>Secrets</code> menu and find your own TLS certificate. Remember, the domain you are going to use is <code>intranet-<span class="attendeeid">XX</span>.txc3670.private</code>, so look for that in the list.</p>
+                    <img class="img-fluid my-2" src="images/ibm-cloud-secrets-manager-secrets.png" />
+                    <p class="my-4">Click on your secret to see its details. Scroll down to the bottom to find the CRN of the secret and copy it to the clipboard.</p>
+                    <img class="img-fluid my-2" src="images/ibm-cloud-secrets-manager-secret.png" />
+                    <p class="my-4">Get back to the terminal and create a Secret resource on the <code>intranet-<span class="attendeeid">XX</span></code> cluster using the Secrets Manager secret:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd27-collapse" aria-expanded="false" aria-controls="cmd27-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd27-btn" onclick="copyContent('cmd27')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd27">ibmcloud oc ingress secret create --name intranet-<span class="attendeeid">XX</span> --cluster intranet-<span class="attendeeid">XX</span> --namespace intranet-website --cert-crn CRN</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd27-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        OK
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">Let's check if the Secret resource is created in the <code>intranet-website</code> namespace by executing:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd28-collapse" aria-expanded="false" aria-controls="cmd28-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd28-btn" onclick="copyContent('cmd28')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd28">oc get secret -n intranet-website intranet-<span class="attendeeid">XX</span></code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd28-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        NAME          TYPE                DATA   AGE
+                                        intranet-XX   kubernetes.io/tls   2      54s
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">At this point the DNS is verified. The secret with the TLS certificate exists on the cluster. The last step is to expose the intranet website with the OpenShift router. You can create an Ingress resource on the cluster with the appropriate configuration to achieve this.</p>
+                    <p class="my-4">Create a file using your favorite editor and save it as <code>ingress.yaml</code> with the following contents:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <button id="cmd29-btn" onclick="copyContent('cmd29')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2" id="cmd29"><code>apiVersion: networking.k8s.io/v1<br />kind: Ingress<br />metadata:<br />  name: intranet-website<br />  namespace: intranet-website<br />spec:<br />  tls:<br />  - hosts:<br />    - intranet-<span class="attendeeid">XX</span>.txc3670.private<br />    secretName: intranet-<span class="attendeeid">XX</span><br />  rules:<br />  - host: intranet-<span class="attendeeid">XX</span>.txc3670.private<br />    http:<br />      paths:<br />      - path: /<br />        pathType: Prefix<br />        backend:<br />          service:<br />            name: intranet-website<br />            port:<br />              number: 8080</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">To create the resource on the cluster, run:</p>
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
+                                <div data-bs-toggle="collapse" href="#cmd30-collapse" aria-expanded="false" aria-controls="cmd30-collapse">
+                                    <button type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="show output">
+                                        <i class="bi bi-terminal"></i>
+                                    </button>
+                                </div>
+                                <button id="cmd30-btn" onclick="copyContent('cmd30')" type="button" class="btn btn-outline-dark" role="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy to clipboard">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                            <div class="d-grid">
+                                <pre class="m-0 mt-2">$ <code id="cmd30">oc apply -f ingress.yaml</code></pre>
+                            </div>
+                        </div>
+                        <div class="card-footer collapse text-bg-dark" id="cmd30-collapse">
+                            <div class="d-grid">
+                                <pre class="m-0 text-light">
+                                        ingress.networking.k8s.io/intranet-website created
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="my-4">It is done! The intranet site should be available on the <a id="attendee-private-url" href="https://intranet-XX.txc3670.private" target="_blank">https://intranet-<span class="attendeeid">XX</span>.txc3670.private</a> domain now on the company's internal network. Open it in the browser to verify.</p>
+                    <img class="img-fluid my-2" src="images/expose-private.png" />
+
+                    <h5 class="pt-5">Quiz</h5>
+                    <p class="my-4">We managed to open the webpage using HTTPS and the browser evaluates the connection as secure even when using a custom certificate issued by <i>TechXchange Co.</i>'s private CA. How is this possible?</p>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz5" id="quiz5option1" data-bs-toggle="modal" data-bs-target="#quiz5incorrect1">
+                        <label class="form-check-label" for="quiz5option1">
+                            The private CA is an intermediate CA and the certificate chain contains a public trusted CA.
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz5" id="quiz5option2" data-bs-toggle="modal" data-bs-target="#quiz5incorrect2">
+                        <label class="form-check-label" for="quiz5option2">
+                            The certificate is trusted worldwide.
+                        </label>
+                    </div>
+                    <div class="m-0 form-check">
+                        <input class="form-check-input" type="radio" name="quiz5" id="quiz5option3" data-bs-toggle="modal" data-bs-target="#quiz5correct">
+                        <label class="form-check-label" for="quiz5option2">
+                            The jumpbox is configured to trust the private CA.
+                        </label>
+                    </div>
+                    <div class="modal fade" id="quiz5correct" tabindex="-1" aria-labelledby="quiz5correctlabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz5correctlabel">Correct!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Nice job! <i class="bi bi-stars"></i></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="quiz5incorrect1" tabindex="-1" aria-labelledby="quiz5incorrect1label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz5incorrect1label">Not exactly!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">The certificate chain contains a leaf certificate for <code>intranet-<span class="attendeeid">XX</span>.txc3670.private</code> that is signed by the private CA (<code>techxchange3670.tmp</code>).</p>
+                                    <img class="img-fluid my-2" src="images/certificate.png" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="quiz5incorrect2" tabindex="-1" aria-labelledby="quiz5incorrect2label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="quiz5incorrect2label">Not exactly!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="my-4">Browsers (and operating systems) usually have a list of trusted CAs that do not include private CAs.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- end -->
+        <section id="end">
+            <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">End of lab</h2>
+
+            <!-- exercise 1 -->
+            <article class="my-3" id="congratulations">
+                <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+                    <h3>Congratulations</h3>
+                </div>
+
+                <div>
+                    <p class="my-4">Congratulations on completing this lab! Impressive work!</p>
+                    <p class="my-4">To recap what you did today:</p>
+                    <ul class="my-0">
+                        <li>You got familiar with IBM Cloud Satellite.</li>
+                        <li>You learnt how to deploy applications with Satellite Config.</li>
+                        <li>You exposed applications on your local machine for debugging purposes, publicly to the internet and privately to a secure network.</li>
+                        <li>You learnt how to manage custom TLS certificates with IBM Cloud Secrets Manager.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="resources/qrcode/qrcode.js"></script>
+    <script src="resources/lab-guide.js"></script>
+</body>
+
+</html>
