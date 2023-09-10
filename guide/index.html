@@ -246,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="my-4">You should see 2 Satellite locations: <code>aws-location-<span class="attendeeid">XX</span></code> runs on AWS hosts, while <code>on-prem-location-<span class="attendeeid">XX</span></code> runs on on-premises hosts.</p>
+                    <p class="my-4">You should see 2 Satellite locations: <code>aws-location-<span class="attendeeid">XX</span></code> (ID: <code><span class="aws-location-id">xxxxxxxxxxxxxxxxxxxx</span></code>) runs on AWS hosts, while <code>on-prem-location-<span class="attendeeid">XX</span></code> (ID: <code><span class="on-prem-location-id">xxxxxxxxxxxxxxxxxxxx</span></code>) runs on on-premises hosts.</p>
                     <p class="my-4">To see the details and status of a Satellite location, you can use following command:</p>
                     <div class="card my-2">
                         <div class="card-body">
@@ -261,7 +261,7 @@
                                 </button>
                             </div>
                             <div class="d-grid">
-                                <pre class="m-0 mt-2">$ <code id="cmd3">ibmcloud sat location get --location aws-location-<span class="attendeeid">XX</span></code></pre>
+                                <pre class="m-0 mt-2">$ <code id="cmd3">ibmcloud sat location get --location <span class="aws-location-id">xxxxxxxxxxxxxxxxxxxx</span></code></pre>
                             </div>
                         </div>
                         <div class="card-footer collapse text-bg-dark" id="cmd3-collapse">
@@ -312,7 +312,7 @@
                                 </button>
                             </div>
                             <div class="d-grid">
-                                <pre class="m-0 mt-2">$ <code id="cmd4">ibmcloud sat host ls --location aws-location-<span class="attendeeid">XX</span></code></pre>
+                                <pre class="m-0 mt-2">$ <code id="cmd4">ibmcloud sat host ls --location <span class="aws-location-id">xxxxxxxxxxxxxxxxxxxx</span></code></pre>
                             </div>
                         </div>
                         <div class="card-footer collapse text-bg-dark " id="cmd4-collapse">

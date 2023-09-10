@@ -18,6 +18,6 @@ Embracing a hybrid multi-cloud architecture can be transformative for businesses
 - Monday, Sep 11 5:00 PM - 6:30 PM PDT
 - Boulevard 159, Level 1
 
-## Lab Guide
+## Lab Instructions
 
-[> > Click here to open the interactive lab guide < <](https://attiss.github.io/ibm-techxchange-2023-3670/guide)
+[> > Open hands-on lab instructions < <](https://attiss.github.io/ibm-techxchange-2023-3670/guide)

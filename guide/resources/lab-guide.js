@@ -43,29 +43,41 @@
                 attendeeIDComponent.innerText = attendeeID;
             });
 
+            let awsLocationID = `xxxxxxxxxxxxxxxxxxxx`;
+            let onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`;
             let publicIP = 'X.X.X.X';
             switch (attendeeID) {
-                case '01': publicIP = '44.214.21.203'; break;
-                case '02': publicIP = 'X.X.X.X'; break;
-                case '03': publicIP = 'X.X.X.X'; break;
-                case '04': publicIP = 'X.X.X.X'; break;
-                case '05': publicIP = 'X.X.X.X'; break;
-                case '06': publicIP = 'X.X.X.X'; break;
-                case '07': publicIP = '54.210.27.68'; break;
-                case '08': publicIP = '44.218.205.0'; break;
-                case '09': publicIP = 'X.X.X.X'; break;
-                case '10': publicIP = 'X.X.X.X'; break;
-                case '11': publicIP = 'X.X.X.X'; break;
-                case '12': publicIP = 'X.X.X.X'; break;
-                case '13': publicIP = 'X.X.X.X'; break;
-                case '14': publicIP = 'X.X.X.X'; break;
-                case '15': publicIP = 'X.X.X.X'; break;
-                case '16': publicIP = 'X.X.X.X'; break;
-                case '17': publicIP = 'X.X.X.X'; break;
-                case '18': publicIP = 'X.X.X.X'; break;
-                case '19': publicIP = 'X.X.X.X'; break;
-                case '20': publicIP = 'X.X.X.X'; break;
+                case '01': awsLocationID = `xxxxxxxxxxxxxxxxxxxx1`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx1`; publicIP = '44.214.21.203'; break;
+                case '02': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '03': awsLocationID = `xxxxxxxxxxxxxxxxxxxx3`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx3`; publicIP = 'X.X.X.X'; break;
+                case '04': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '05': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '06': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '07': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = '54.210.27.68'; break;
+                case '08': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = '44.218.205.0'; break;
+                case '09': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '10': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '11': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '12': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '13': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '14': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '15': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '16': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '17': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '18': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '19': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '20': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
             }
+
+            let attendeeAWSLocationIDs = Array.from(document.getElementsByClassName('aws-location-id'));
+            attendeeAWSLocationIDs.forEach(function (attendeeAWSLocationID) {
+                attendeeAWSLocationID.innerText = awsLocationID;
+            });
+
+            let attendeeOnPremLocationIDs = Array.from(document.getElementsByClassName('on-prem-location-id'));
+            attendeeOnPremLocationIDs.forEach(function (attendeeOnPremLocationID) {
+                attendeeOnPremLocationID.innerText = awsLocationID;
+            });
 
             let attendeePublicIPs = Array.from(document.getElementsByClassName('attendee-public-ip'));
             attendeePublicIPs.forEach(function (attendeePublicIP) {
@@ -89,6 +101,16 @@
             let attendeeIds = Array.from(document.getElementsByClassName('attendeeid'));
             attendeeIds.forEach(function (attendeeId) {
                 attendeeId.innerText = 'XX';
+            });
+
+            let attendeeAWSLocationIDs = Array.from(document.getElementsByClassName('aws-location-id'));
+            attendeeAWSLocationIDs.forEach(function (attendeeAWSLocationID) {
+                attendeeAWSLocationID.innerText = 'xxxxxxxxxxxxxxxxxxxx';
+            });
+
+            let attendeeOnPremLocationIDs = Array.from(document.getElementsByClassName('on-prem-location-id'));
+            attendeeOnPremLocationIDs.forEach(function (attendeeOnPremLocationID) {
+                attendeeOnPremLocationID.innerText = 'xxxxxxxxxxxxxxxxxxxx';
             });
 
             let attendeePublicIPs = Array.from(document.getElementsByClassName('attendee-public-ip'));
