@@ -76,7 +76,7 @@
 
             let attendeeOnPremLocationIDs = Array.from(document.getElementsByClassName('on-prem-location-id'));
             attendeeOnPremLocationIDs.forEach(function (attendeeOnPremLocationID) {
-                attendeeOnPremLocationID.innerText = awsLocationID;
+                attendeeOnPremLocationID.innerText = onPremLocationID;
             });
 
             let attendeePublicIPs = Array.from(document.getElementsByClassName('attendee-public-ip'));
