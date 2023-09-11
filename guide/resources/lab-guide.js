@@ -47,7 +47,7 @@
             let onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`;
             let publicIP = 'X.X.X.X';
             switch (attendeeID) {
-                case '01': awsLocationID = `cjv8kukd06jekh4e8h90`; onPremLocationID = `cjvc8bvw0op8o0mjj3ag`; publicIP = '54.86.247.167'; break;
+                case '01': awsLocationID = `cjv8kukd06jekh4e8h90`; onPremLocationID = `cjvh65or0qu8mtra4vt0`; publicIP = '54.86.247.167'; break;
                 case '02': awsLocationID = `cjv8l1id0idsiva26jeg`; onPremLocationID = `cjv6ubmw0g8knhvsckj0`; publicIP = '54.210.69.232'; break;
                 case '03': awsLocationID = `cjv8l5dd0s3g4kke8h9g`; onPremLocationID = `cjv6upgw0ppu2i1c9ce0`; publicIP = '44.214.63.163'; break;
                 case '04': awsLocationID = `cjv8mj8d0v7a75jsumig`; onPremLocationID = `cjv6uspw0g4r4f9c9ceg`; publicIP = '52.1.51.233'; break;
