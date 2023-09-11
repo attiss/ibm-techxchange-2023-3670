@@ -47,26 +47,26 @@
             let onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`;
             let publicIP = 'X.X.X.X';
             switch (attendeeID) {
-                case '01': awsLocationID = `xxxxxxxxxxxxxxxxxxxx1`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx1`; publicIP = '44.214.21.203'; break;
-                case '02': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '03': awsLocationID = `xxxxxxxxxxxxxxxxxxxx3`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx3`; publicIP = 'X.X.X.X'; break;
-                case '04': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '05': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '06': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '07': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = '54.210.27.68'; break;
-                case '08': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = '44.218.205.0'; break;
-                case '09': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '10': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '11': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '12': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '13': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '14': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '15': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '16': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '17': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '18': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '19': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
-                case '20': awsLocationID = `xxxxxxxxxxxxxxxxxxxx`; onPremLocationID = `xxxxxxxxxxxxxxxxxxxx`; publicIP = 'X.X.X.X'; break;
+                case '01': awsLocationID = `cjv8kukd06jekh4e8h90`; onPremLocationID = `cjvc8bvw0op8o0mjj3ag`; publicIP = '54.86.247.167'; break;
+                case '02': awsLocationID = `cjv8l1id0idsiva26jeg`; onPremLocationID = `cjv6ubmw0g8knhvsckj0`; publicIP = '54.210.69.232'; break;
+                case '03': awsLocationID = `cjv8l5dd0s3g4kke8h9g`; onPremLocationID = `cjv6upgw0ppu2i1c9ce0`; publicIP = '44.214.63.163'; break;
+                case '04': awsLocationID = `cjv8mj8d0v7a75jsumig`; onPremLocationID = `cjv6uspw0g4r4f9c9ceg`; publicIP = '52.1.51.233'; break;
+                case '05': awsLocationID = `cjv8mnfd0lm1fb3esqvg`; onPremLocationID = `cjv6v2vw0ng5821c9cf0`; publicIP = '52.4.143.192'; break;
+                case '06': awsLocationID = `cjv8mrmd010tjh3sumj0`; onPremLocationID = `cjv6v7fw0ubo9htk7fl0`; publicIP = '3.214.62.201'; break;
+                case '07': awsLocationID = `cjv8mujd0krd77resr00`; onPremLocationID = `cjv6vaqw01v8ivlk7flg`; publicIP = '44.218.101.79'; break;
+                case '08': awsLocationID = `cjv8ni0d0p3dttle9h40`; onPremLocationID = `cjv6vfhw0gr3nfqkp48g`; publicIP = '52.44.172.88'; break;
+                case '09': awsLocationID = `cjv8npad00b32cvrkaug`; onPremLocationID = `cjvc8hqw0ktd4vejj3b0`; publicIP = '18.215.103.125'; break;
+                case '10': awsLocationID = `cjv8nu2d0e0rnfs36uo0`; onPremLocationID = `cjv6vq5w024pqe0paldg`; publicIP = '44.204.32.221'; break;
+                case '11': awsLocationID = `cjv8o1ed00hfq7t958ag`; onPremLocationID = `cjvc8rrw014019kmnhd0`; publicIP = '52.1.190.84'; break;
+                case '12': awsLocationID = `cjv8o5ld0n6jg3199st0`; onPremLocationID = `cjvc938w0arpunnsckm0`; publicIP = '54.152.253.143'; break;
+                case '13': awsLocationID = `cjv8o8od0r5g26frkav0`; onPremLocationID = `cjvbm35w0i1fl14a3t7g`; publicIP = '54.165.92.85'; break;
+                case '14': awsLocationID = `cjv8ocnd0ial4o5958b0`; onPremLocationID = `cjvc80mw0koc5scos750`; publicIP = '54.159.10.88'; break;
+                case '15': awsLocationID = `cjv8or3d01agfo3sumjg`; onPremLocationID = `cjvc7r8w0pehbpjtbevg`; publicIP = '34.206.146.96'; break;
+                case '16': awsLocationID = `cjv8p20d0e1h4fd958bg`; onPremLocationID = `cjvc7mqw0oatgd9c9ci0`; publicIP = '52.3.84.194'; break;
+                case '17': awsLocationID = `cjv8pj2d0mtnd53sumk0`; onPremLocationID = `cjvc707w0gsnk4jtbev0`; publicIP = '52.54.50.184'; break;
+                case '18': awsLocationID = `cjv8pn1d0v7cd4h99stg`; onPremLocationID = `cjvc6s5w0rsvgt0palh0`; publicIP = '3.232.155.71'; break;
+                case '19': awsLocationID = `cjv8r7jd0emk425e9h4g`; onPremLocationID = `cjvc6ouw0l39vfpc9chg`; publicIP = '52.2.44.249'; break;
+                case '20': awsLocationID = `cjv8reod04r4q8ke8ha0`; onPremLocationID = `cjvc6kfw0dbik4lk7fng`; publicIP = '54.211.56.129'; break;
             }
 
             let attendeeAWSLocationIDs = Array.from(document.getElementsByClassName('aws-location-id'));
