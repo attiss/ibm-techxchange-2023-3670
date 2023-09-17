@@ -20,4 +20,4 @@ Embracing a hybrid multi-cloud architecture can be transformative for businesses
 
 ## Lab Instructions
 
-[> > Open hands-on lab instructions < <](https://attiss.github.io/ibm-techxchange-2023-3670/guide)
+[> > Open hands-on lab instructions < <](https://ibm-satellite.github.io/ibm-techxchange-2023-3670/guide/)

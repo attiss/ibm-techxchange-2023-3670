@@ -624,7 +624,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="my-4">The declarative configuration of the company website is already prepared (<a href="https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/public-website.yaml" target="_blank">here</a>). You just need to apply:</p>
+                    <p class="my-4">The declarative configuration of the company website is already prepared (<a href="https://github.com/ibm-satellite/ibm-techxchange-2023-3670/blob/main/applications/public-website.yaml" target="_blank">here</a>). You just need to apply:</p>
                     <div class="card my-2">
                         <div class="card-body">
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end float-end">
@@ -638,7 +638,7 @@
                                 </button>
                             </div>
                             <div class="d-grid">
-                                <pre class="m-0 mt-2">$ <code id="cmd10">oc apply -f https://raw.githubusercontent.com/attiss/ibm-techxchange-2023-3670/main/applications/public-website.yaml</code></pre>
+                                <pre class="m-0 mt-2">$ <code id="cmd10">oc apply -f https://raw.githubusercontent.com/ibm-satellite/ibm-techxchange-2023-3670/main/applications/public-website.yaml</code></pre>
                             </div>
                         </div>
                         <div class="card-footer collapse text-bg-dark" id="cmd10-collapse">
@@ -1115,12 +1115,12 @@
                     <p class="my-4">In this task, you will learn how <a href="https://cloud.ibm.com/docs/satellite?topic=satellite-cluster-config" target="_blank">Satellite Config</a> is set up to deploy the intranet website of <i>TechXchange Co.</i> to an OpenShift cluster (<code>intranet-<span class="attendeeid">XX</span></code>) deployed on a hybrid-cloud location (<code>on-prem-location-<span class="attendeeid">XX</span></code>). You will learn how to manage custom TLS certificates using <a href="https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-getting-started" target="_blank">IBM Cloud Secrets Manager</a> and how to expose an application through private DNS and secure communication with your custom TLS certificate.</p>
 
                     <h4>Inspect Satellite Config of your intranet website deployment</h4>
-                    <p class="my-4">With the help of Satellite Config, you can easily and consistently deploy, manage, and control your applications and policies across clusters and locations. In this section you are going to learn how we set up Satellite Config to deploy the intranet website using a GitOps approach. The Kubernetes resources are located in a <a href="https://github.com/attiss/ibm-techxchange-2023-3670/blob/main/applications/intranet-website.yaml" target="_blank">public GitHub repository</a>.</p>
+                    <p class="my-4">With the help of Satellite Config, you can easily and consistently deploy, manage, and control your applications and policies across clusters and locations. In this section you are going to learn how we set up Satellite Config to deploy the intranet website using a GitOps approach. The Kubernetes resources are located in a <a href="https://github.com/ibm-satellite/ibm-techxchange-2023-3670/blob/main/applications/intranet-website.yaml" target="_blank">public GitHub repository</a>.</p>
                     <p class="mt-4">The setup consists of three steps:</p>
                     <ul class="my-0">
                         <li>Creating a configuration that defines the resources to be deployed.</li>
                         <ul>
-                            <li>For this lab, we created a configuration that watches the <code>https://github.com/attiss/ibm-techxchange-2023-3670</code> public GitHub repository.</li>
+                            <li>For this lab, we created a configuration that watches the <code>https://github.com/ibm-satellite/ibm-techxchange-2023-3670</code> public GitHub repository.</li>
                         </ul>
                         <li>Creating cluster group(s) to deploy the resources to.</li>
                         <ul>
